@@ -1,0 +1,87 @@
+LIBRARY IEEE ;
+USE IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all;
+
+entity sequencer is
+  port(
+    Reset     : in   std_logic;
+    Clock      : in   std_logic;
+    Start     : in   std_logic;
+    Done      : in  std_logic;
+    End_sig : in std_logic;
+    Goto6 : in std_logic;
+    Read_control : in std_logic;
+    Write_control : in std_logic;
+    Wait_sig : in std_logic;
+    Stop_sig : in std_logic;
+    t0 : out std_logic;
+    t1 : out std_logic;
+    t2 : out std_logic;
+    t3 : out std_logic;
+    t4 : out std_logic;
+    t5 : out std_logic;
+    t6 : out std_logic;
+    t7 : out std_logic;
+    r_sequencer : out std_logic;
+    w_sequencer : out std_logic
+    );
+end sequencer;
+
+architecture rtl of sequencer is
+
+  type states is (Initial, Stop, Run, Read_Q, Write_Q);
+  
+begin
+
+  -- This process models a JK flip flop, where J = Start and K = Stop_sig. The
+  -- purpose is to capture the rising edge of Start that starts the CPU and rising
+  -- edge of Stop_sig that stops the CPU.
+  run_signal_process : process(Reset,Clock)
+  begin
+  end process run_signal_process;
+
+  -- Concurrent signal assignment to implement next-state logic for Run_sig.
+  -- JK flip flop: q+ = Jq' + K'q, J = Start, K = Stop_sig
+
+
+  -- The following processes implement the fetch-execute FSM for the control unit.
+  current_state_fetch_execute : process(Reset, Clock)
+  begin
+  end process current_state_fetch_execute;
+
+  next_state_fetch_execute : process(current_state, Run_sig, Done, Read_control, Write_control)
+  begin
+    case current_state is
+      when Initial =>
+      when Run =>
+      when Read_Q =>
+      when Write_Q =>
+      when Stop =>
+    end case;
+  end process next_state_fetch_execute;
+
+  fetch_execute_output : process(current_state)
+  begin
+    case current_state is
+      when Initial =>
+      when Run =>
+      when Read_Q =>
+      when Write_Q =>
+      when Stop =>
+    end case;
+  end process fetch_execute_output;
+
+  -- Finally, the following code implements the counter that generates the T0-T7 sequence timing
+  -- signals.
+  current_state_t_counter : process(Reset, Clock)
+  begin
+  end process current_state_t_counter;
+
+  next_state_t_counter : process (t_counter, Run_sig, Read_control, Write_control, Done,
+                                 End_sig, Goto6, Wait_sig)
+  begin
+  end process next_state_t_counter;
+
+  -- output logic for T0-T7 implement as concurrent signal assignments.
+  
+end rtl;

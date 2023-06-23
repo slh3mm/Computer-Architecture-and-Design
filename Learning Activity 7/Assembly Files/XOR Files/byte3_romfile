@@ -1,0 +1,11 @@
+#Byte 3 ROM file. Automatically generated on 12:34:54 20 Apr, 2023
+#Input file: xor.txt
+
+#address / data ;
+#----------------
+0/28;
+1/28;
+2/98;
+3/18;
+4/09;
+5/f8;

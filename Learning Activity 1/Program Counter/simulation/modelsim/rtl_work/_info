@@ -1,0 +1,95 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/PC/simulation/modelsim
+Eprogram_counter
+Z1 w1675180160
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z5 8C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/PC/program_counter.vhd
+Z6 FC:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/PC/program_counter.vhd
+l0
+L5 1
+VHKzYSR9LFi[TPMI_1_;on2
+!s100 LJ57oCGUM004_cGcYI=hk2
+Z7 OV;C;2020.1;71
+33
+Z8 !s110 1675710365
+!i10b 1
+Z9 !s108 1675710364.000000
+Z10 !s90 -reportprogress|300|-2008|-work|work|C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/PC/program_counter.vhd|
+Z11 !s107 C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/PC/program_counter.vhd|
+!i113 1
+Z12 o-2008 -work work
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+DEx4 work 15 program_counter 0 22 HKzYSR9LFi[TPMI_1_;on2
+!i122 0
+l19
+L15 33
+V2E;BQ8D=MLXkm_>Cijg5E0
+!s100 4DYZoc_@D:R^bk3<;n>_I1
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Etestbench
+Z14 w1675712318
+R3
+R4
+!i122 6
+R0
+Z15 8C:\Users\spenc\OneDrive\Documents\School\ECE 4435\Learning Activity 1 TB\testbench.vhd
+Z16 FC:\Users\spenc\OneDrive\Documents\School\ECE 4435\Learning Activity 1 TB\testbench.vhd
+l0
+L4 1
+V3YCKzjTBIoFA7mbGe_6^;0
+!s100 ^0VWa5DF[<C=bFQcdGX1T0
+R7
+33
+Z17 !s110 1675712324
+!i10b 1
+Z18 !s108 1675712324.000000
+Z19 !s90 -reportprogress|300|-2008|-work|work|C:\Users\spenc\OneDrive\Documents\School\ECE 4435\Learning Activity 1 TB\testbench.vhd|
+Z20 !s107 C:\Users\spenc\OneDrive\Documents\School\ECE 4435\Learning Activity 1 TB\testbench.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+Z21 DEx4 work 9 testbench 0 22 3YCKzjTBIoFA7mbGe_6^;0
+!i122 6
+l26
+Z22 L7 85
+V@PdB@CM8aZX1VzfXDb`2;3
+!s100 N`;nzzRB;FTW:?i0[aVON2
+R7
+33
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13

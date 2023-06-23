@@ -1,0 +1,137 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/simulation/modelsim
+Econtrol_signals_logic
+Z1 w1677860914
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z5 8C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/control_signals_logic.vhd
+Z6 FC:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/control_signals_logic.vhd
+l0
+L5 1
+VWF27_1L2`eN7QEHIAdBW>1
+!s100 7:>N1zIkZSzDf=AX>;gXg1
+Z7 OV;C;2020.1;71
+33
+Z8 !s110 1677860952
+!i10b 1
+Z9 !s108 1677860952.000000
+Z10 !s90 -reportprogress|300|-2008|-work|work|C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/control_signals_logic.vhd|
+Z11 !s107 C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/control_signals_logic.vhd|
+!i113 1
+Z12 o-2008 -work work
+Z13 tExplicit 1 CvgOpt 0
+Artl
+Z14 DEx4 work 14 opcode_decoder 0 22 B<<OCfGnDi8LZ7bLGdKVP2
+R2
+R3
+R4
+DEx4 work 21 control_signals_logic 0 22 WF27_1L2`eN7QEHIAdBW>1
+!i122 1
+l98
+L60 128
+VL2lSA?gHX]Wm6^b;gaA?X0
+!s100 VC1UMjfc@;@8lc;J5<c7_3
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eopcode_decoder
+Z15 w1677081542
+R3
+R4
+!i122 0
+R0
+Z16 8C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/opcode_decoder.vhd
+Z17 FC:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/opcode_decoder.vhd
+l0
+L4 1
+VB<<OCfGnDi8LZ7bLGdKVP2
+!s100 f@[DP<_E@9^NSHIcKFVI[1
+R7
+33
+R8
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-2008|-work|work|C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/opcode_decoder.vhd|
+Z19 !s107 C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/opcode_decoder.vhd|
+!i113 1
+R12
+R13
+Artl
+R3
+R4
+R14
+!i122 0
+l34
+L33 72
+VOK0YH<I2]J`U[KDNa6cHb1
+!s100 [F^DM0Z=;OWgme:68<g^;2
+R7
+33
+R8
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13
+Etestbench
+Z20 w1677684839
+R3
+R4
+!i122 2
+R0
+Z21 8C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/TB/testbench.vhd
+Z22 FC:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/TB/testbench.vhd
+l0
+L4 1
+VnI^L@@9hXRZ;zSllZLOP73
+!s100 ?;Fi2HEi<1II4RT3IjQ^^2
+R7
+33
+Z23 !s110 1677860956
+!i10b 1
+Z24 !s108 1677860956.000000
+Z25 !s90 -reportprogress|300|-2008|-work|work|C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/TB/testbench.vhd|
+!s107 C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/TB/testbench.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+DEx4 work 9 testbench 0 22 nI^L@@9hXRZ;zSllZLOP73
+!i122 2
+l155
+L7 2842
+V[SZHVkJlmNiCEH7]7?WJ21
+!s100 Z`I3:TPH5SQY?3Zj`:O=e3
+R7
+33
+R23
+!i10b 1
+R24
+R25
+Z26 !s107 C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/TB/testbench.vhd|
+!i113 1
+R12
+R13

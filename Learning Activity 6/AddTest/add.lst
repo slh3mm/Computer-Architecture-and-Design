@@ -1,0 +1,20 @@
+(SRCTools Version 3.1.1)
+ HexLoc     DecLoc    MachWord   Label        Instruction                Comment
+                                data1:        .equ 64                    ; first data
+                                data2:        .equ 32                    ; second data
+                                                                         
+                                              .org 0                     ; 0x0000 - start of ROM
+00000000  0000000000  28400040                la r1, data1               ; Load first data
+00000004  0000000004  28800020                la r2, data2               ; Load second data
+00000008  0000000008  60c22000                add r3, r1, r2             ; add tow data items together
+0000000c  0000000012  18c08004                st r3, Result              ; store result
+00000010  0000000016  09008004                ld r4, Result              ; load result back into r4 for memory test
+00000014  0000000020  f8000000                stop                       
+                                                                         
+                                              .org 32772                 ; 0x8004 - location in RAM
+00008004  0000032772            Result:       .dw 1                      ; storage for result
+
+--- Symbol Table ---
+data1: 64
+Result: 32772
+data2: 32

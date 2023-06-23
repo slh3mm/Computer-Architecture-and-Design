@@ -1,0 +1,97 @@
+(SRCTools Version 3.1.1)
+ HexLoc     DecLoc    MachWord   Label        Instruction                Comment
+                                                                         ; SRC Assembly File:  br_tst.asm
+                                                                         ;
+                                                                         ; Tests assembling and processing of the branching instructions.
+                                                                         ; This test is best done with breakpoints and stepping.
+                                                                         ; The program loads a number of addresses into registers r1->r11
+                                                                         ; and then uses all of the branching instructions to perform
+                                                                         ; simple looping actions.  Branch and link addresses are loaded
+                                                                         ; into registers r12->r16.  The tester must monitor the statements
+                                                                         ; executed to confirm that control is properly passed based on 
+                                                                         ; the register values used.  
+                                                                         ;
+                                                                         ; Warning: altering, inserting or moving any instructions will invalidate
+                                                                         ; the comments and the validity of the tests.
+                                              .org 0                     ; 0x0000 - start of ROM
+00000000  0000000000  2fc01000                la r31, Main               ; Reset action: load addess label, Main
+00000004  0000000004  403e0001                br r31                     ; branch to Main
+                                                                         
+                                              .org 4096                  
+                                                                         ; load a bunch of branch addresses for branch tests:
+00001000  0000004096  28401040  Main:         la r1, Jump1               ; put address of Jump1 (0x1040) in r1
+00001004  0000004100  28801050                la r2, Jump2               ; put address of Jump2 (0x1050) in r2
+00001008  0000004104  28c0105c                la r3, Jump3               ; put address of Jump3 (0x105c) in r3
+0000100c  0000004108  29001068                la r4, Jump4               ; put address of Jump4 (0x1068) in r4
+00001010  0000004112  29401074                la r5, Jump5               ; put address of Jump5 (0x1074) in r5
+00001014  0000004116  29801080                la r6, Jump6               ; put address of Jump6 (0x1080) in r6
+00001018  0000004120  29c01094                la r7, Jump7               ; put address of Jump7 (0x1094) in r7
+0000101c  0000004124  2a0010b8                la r8, Jump8               ; put address of Jump8 (0x10b8) in r8
+00001020  0000004128  2a4010c4                la r9, Jump9               ; put address of Jump9 (0x10c4) in r9
+00001024  0000004132  2a8010d0                la r10, Jump10             ; put address of Jump10 (0x10d0) in r10
+00001028  0000004136  2ac010dc                la r11, Jump11             ; put address of Jump11 (0x10dc) in r11
+0000102c  0000004140  2d0010e8                la r20, Stop               ; put address of Stop (0x10e8) in r20
+00001030  0000004144  00000000                nop                        ; 
+00001034  0000004148  6fc00005  Loop5:        addi r31, r0, 5            ; put 5 in r31 for loop control
+00001038  0000004152  40020001                br r1                      ; branch unconditionally to Jump1
+0000103c  0000004156  6ffe0001                addi r31, r31, 1           ; r31 value should NOT change (remains 5)
+00001040  0000004160  6fffffff  Jump1:        addi r31, r31, -1          ; decrement r31 (loop counter)
+00001044  0000004164  4005f002                brzr r2, r31               ; branch to Jump2 when counter r31 is zero
+00001048  0000004168  40000000                brnv                       ; don't branch
+0000104c  0000004172  40020001                br r1                      ; otherwise loop back to Jump1
+00001050  0000004176  2f800007  Jump2:        la r30, 7                  ; set a new loop counter in r30 to 7
+00001054  0000004180  4007e005                brmi r3, r30               ; branch to Jump3 should NOT occur, r30 is not negative
+00001058  0000004184  00000000                nop                        ; no-op
+0000105c  0000004188  6fbdffff  Jump3:        addi r30, r30, -1          ; decrement r30
+00001060  0000004192  4009e005                brmi r4, r30               ; branch to Jump4 when r30 is negative
+00001064  0000004196  40060001                br r3                      ; otherwise loop back to Jump3
+00001068  0000004200  2f41fffa  Jump4:        la r29, -6                 ; set a new loop counter in r29 to -6
+0000106c  0000004204  400bd004                brpl r5, r29               ; branch to Jump5 should NOT occur, r29 is not positive
+00001070  0000004208  00000000                nop                        ;
+00001074  0000004212  6f7a0001  Jump5:        addi r29, r29, 1           ; incremement r29
+00001078  0000004216  400dd004                brpl r6, r29               ; branch to Jump6 if loop counter r29 is positive (>=0)
+0000107c  0000004220  400a0001                br r5                      ; otherwise loop back to Jump5
+00001080  0000004224  400fc003  Jump6:        brnz r7, r28               ; branch to Jump7 should NOT occur, r28 is zero
+00001084  0000004228  7739e000                sub r28, r28, r30          ; subtract -1 (add 1) from r28
+00001088  0000004232  400fc003                brnz r7, r28               ; branch to Jump7 should now occur
+0000108c  0000004236  6739e000                add r28, r28, r30          ; r28 should NOT be decremented by this command
+00001090  0000004240  00000000                nop                        ; this nop should also be skipped
+00001094  0000004244  2e000005  Jump7:        la r24, 5                  ; set a new loop counter in r24 to 5
+00001098  0000004248  4b100001                brl r12, r8                ; save PC in r12 and branch to Jump8
+0000109c  0000004252  4b538002                brlzr r13, r9, r24         ; then save PC in r13 and branch to Jump9 (r24 should be 0)
+000010a0  0000004256  67bde000                add r30, r30, r30          ; decrement r30 to -2
+000010a4  0000004260  4b95e005                brlmi r14, r10, r30        ; then save PC in r14 and branch to Jump10 (r30 should be -2)
+000010a8  0000004264  4bc00000                brlnv r15                  ; no branch, just save PC in r15
+000010ac  0000004268  4c17c003                brlnz r16, r11, r28        ; then save PC in r16 and branch to Jump11 (r28 should be 1)
+000010b0  0000004272  00000000                nop                        ; continue after brl
+000010b4  0000004276  40280001                br r20                     ; branch to stop
+000010b8  0000004280  6e31ffff  Jump8:        addi r24, r24, -1          ; decrement r24
+000010bc  0000004284  40198002                brzr r12, r24              ; return to original loop when r24 is zero
+000010c0  0000004288  40100001                br r8                      
+000010c4  0000004292  6e300001  Jump9:        addi r24, r24, 1           ; increment r24
+000010c8  0000004296  401b8003                brnz r13, r24              ; return to original loop when r24 is nonzero
+000010cc  0000004300  40120001                br r9                      
+000010d0  0000004304  6fbc0001  Jump10:       addi r30, r30, 1           ; increment r30
+000010d4  0000004308  401de004                brpl r14, r30              ; return to original loop when r30 is >=0
+000010d8  0000004312  40140001                br r10                     
+000010dc  0000004316  6f39ffff  Jump11:       addi r28, r28, -1          ; decrement r28
+000010e0  0000004320  4021c005                brmi r16, r28              ; return to original loop when r28 is <0
+000010e4  0000004324  40160001                br r11                     
+000010e8  0000004328  f8000000  Stop:         stop                       
+                                                                         
+
+--- Symbol Table ---
+Stop: 4328
+Jump9: 4292
+Loop5: 4148
+Jump11: 4316
+Jump8: 4280
+Jump10: 4304
+Jump7: 4244
+Jump6: 4224
+Jump5: 4212
+Jump4: 4200
+Jump3: 4188
+Jump2: 4176
+Jump1: 4160
+Main: 4096

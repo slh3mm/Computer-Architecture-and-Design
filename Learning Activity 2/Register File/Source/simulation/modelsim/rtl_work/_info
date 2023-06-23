@@ -1,0 +1,97 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Source/simulation/modelsim
+Eregister_file
+Z1 w1676170107
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z5 8C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Source/register_file.vhd
+Z6 FC:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Source/register_file.vhd
+l0
+L5 1
+VkNeL9ka4]e1n;aabg;JGk1
+!s100 [XE>^Gf8<:?L;Q?]C4U^32
+Z7 OV;C;2020.1;71
+33
+Z8 !s110 1676318527
+!i10b 1
+Z9 !s108 1676318527.000000
+Z10 !s90 -reportprogress|300|-2008|-work|work|C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Source/register_file.vhd|
+Z11 !s107 C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Source/register_file.vhd|
+!i113 1
+Z12 o-2008 -work work
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+DEx4 work 13 register_file 0 22 kNeL9ka4]e1n;aabg;JGk1
+!i122 0
+l23
+L17 43
+VUM2bSG<ObS1abBZnFG3Hz3
+!s100 M`9Xi[7ic0X;=KLC9S`j]1
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Etestbench
+Z14 w1676174011
+R2
+R3
+R4
+!i122 1
+R0
+Z15 8C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Testbench/testbench.vhd
+Z16 FC:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Testbench/testbench.vhd
+l0
+L5 1
+V;OkSj4UIZRHoP^O:nB6bW1
+!s100 mgoF7g3WQoCUGBFIK6gXA3
+R7
+33
+Z17 !s110 1676318546
+!i10b 1
+Z18 !s108 1676318546.000000
+Z19 !s90 -reportprogress|300|-2008|-work|work|C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Testbench/testbench.vhd|
+!s107 C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Testbench/testbench.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+DEx4 work 9 testbench 0 22 ;OkSj4UIZRHoP^O:nB6bW1
+!i122 1
+l30
+L8 99
+VRJX;H^m0`ckDM>K;nRR=L2
+!s100 aLdaRYb_9i9dQ8Bb@JJ]F2
+R7
+33
+R17
+!i10b 1
+R18
+R19
+Z20 !s107 C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Testbench/testbench.vhd|
+!i113 1
+R12
+R13

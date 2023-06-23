@@ -1,0 +1,33 @@
+Quartus Prime Archive log --	C:/Users/spenc/OneDrive/Documents/School/ECE 4435/CPU/CPU_tmp_archive.qarlog
+
+Archive:	C:/Users/spenc/OneDrive/Documents/School/ECE 4435/CPU/CPU_tmp_archive.qar
+Date:		Wed Apr 19 19:13:13 2023
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/CPU/CPU.qpf
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/CPU/CPU.qsf
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/CPU/CPU.vhd
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/ControlUnit/ControlUnit.vhd
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Datapath/Datapath.vhd
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/IR/instruction_register.vhd
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/PC/program_counter.vhd
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Source/register_file.vhd
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 3/alu.vhd
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/control_signals_logic.vhd
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/opcode_decoder.vhd
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 5/Con Logic/con_logic.vhd
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 5/Sequencer/sequencer.vhd
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 5/Shift Control/shift_control.vhd
+C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/memory_interface.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 16 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Wed Apr 19 19:13:16 2023
+Source archive file:	C:/Users/spenc/OneDrive/Documents/School/ECE 4435/CPU/CPU_tmp_archive.qar
+Archive was extracted into	C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/
+		 - successfully.

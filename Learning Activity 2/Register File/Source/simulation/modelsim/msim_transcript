@@ -1,0 +1,51 @@
+# Reading pref.tcl
+# do register_file_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Source/register_file.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:07 on Feb 13,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Source/register_file.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity register_file
+# -- Compiling architecture rtl of register_file
+# End time: 15:02:07 on Feb 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do testbench.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:26 on Feb 13,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Testbench/testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity testbench
+# -- Compiling architecture behavioral of testbench
+# End time: 15:02:26 on Feb 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.testbench 
+# Start time: 15:02:26 on Feb 13,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(behavioral)
+# Loading work.register_file(rtl)
+add wave -position insertpoint sim:/testbench/b2v_RF_0/*
+add wave -position insertpoint  \
+sim:/testbench/b2v_RF_0/RF
+run 9800 ns
+# End time: 15:41:14 on Feb 13,2023, Elapsed time: 0:38:48
+# Errors: 0, Warnings: 0

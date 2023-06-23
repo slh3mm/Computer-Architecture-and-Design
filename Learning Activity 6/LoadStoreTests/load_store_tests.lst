@@ -1,0 +1,258 @@
+(SRCTools Version 3.1.1)
+ HexLoc     DecLoc    MachWord   Label        Instruction                Comment
+                                                                         ; SRC Assembly File:  ldst_tst.asm
+                                                                         ;
+                                                                         ; Tests assembling and processing of the load and store instructions
+                                                                         ; as well as most of the pseudo-ops.  Register is initialized with a 
+                                                                         ; value of 0x2000 and then the remaining registers are filled row-by-row
+                                                                         ; with the row values (i.e., registers r4->r7 are filled with 2's for 
+                                                                         ; row 2, r8-r11 are filled with 3's, etc.).
+                                                                         ;
+                                                                         ; Memory starting at 0x2000 is then alternately (every other word) 
+                                                                         ; filled with values from 1 to 8.  This is followed by four empty
+                                                                         ; words.  Then bytes are filled with values from 1 to 21 immediately
+                                                                         ; followed by 3 bytes = 0xff7fff.  Six words are then skipped and 
+                                                                         ; finally values from 1-10 are loaded as half-words and then offset
+                                                                         ; by one byte and input again as half-words to test the byte-based
+                                                                         ; memory.  Finally, string literals are stored in byte-wise, halfword-
+                                                                         ; wise, and word-wise using various ".org" settings to space out the
+                                                                         ; strings in memory.
+                                                                         ;
+                                                                         ; Warning: altering, inserting or moving any instructions will invalidate
+                                                                         ; the comments and the validity of the tests.
+                                              .org 0                     ; 0x0000 - start of ROM
+00000000  0000000000  2fc01000                la r31, Main               ; Reset action: load addess label, Main
+00000004  0000000004  403e0001                br r31                     ; branch to Main
+                                                                         
+                                              .org 4096                  ; 0x1000, to make it easy
+                                Addr1:        .equ 32785                 ; set a constant
+00001000  0000004096  30006ffc  Main:         lar r0, OneR               ; c1 should be 0x0ffc;  r0 should be 0x8000
+00001004  0000004100  28400001                la r1, 1                   ; c2 should be 1;       r1 should be 1
+00001008  0000004104  20406ff4                str r1, OneR               ; c1 should be 0x0ff4;  loc 0x8000 should be 1 
+0000100c  0000004108  10806ff0                ldr r2, OneR               ; c1 should be 0x0ff0;  r2 should be 1
+00001010  0000004112  10c06fec                ldr r3, OneR               ; c1 should be 0x0fec;  r3 should be 1
+00001014  0000004116  29000002                la r4, 2                   ; c2 should be 2;       r4 should be 2
+00001018  0000004120  19008008                st r4, TwoR                ; c2 should be 0x8008;  loc 0x8008 should be 2  
+0000101c  0000004124  09408008                ld r5, TwoR                ; c2 should be 0x8008;  r5 should be 2
+00001020  0000004128  11806fe4                ldr r6, TwoR               ; c1 should be 0x0fe4;  r6 should be 2
+00001024  0000004132  11c06fe0                ldr r7, TwoR               ; c1 should be 0x0fe0;  r7 should be 2
+00001028  0000004136  2a000003                la r8, 3                   ; c2 should be 3;       r8 should be 3
+0000102c  0000004140  1a008014                st r8, ThreeR              ; c2 should be 0x8014;  loc 0x8014 should be 3  
+00001030  0000004144  12406fe0                ldr r9, ThreeR             ; c1 should be 0x0fe0;  r9 should be 3
+00001034  0000004148  0a808014                ld r10, ThreeR             ; c2 should be 0x8014;  r10 should be 3
+00001038  0000004152  0ad48011                ld r11, Addr1(r10)         ; c2 should be 0x8011;  r11 should be 3
+0000103c  0000004156  13000fdc                ldr r12, Four              ; c1 should be 0x0fdc;  r12 should be 4
+00001040  0000004160  2b400004                la r13, 4                  ; c2 should be 4;       r13 should be 4
+00001044  0000004164  0b9a2018                ld r14, 8216(r13)          ; c2 should be 0x2018;  r14 should be 4
+00001048  0000004168  13c00fd0                ldr r15, Four              ; c1 should be 0x0fd0;  r15 should be 4
+0000104c  0000004172  2c000005                la r16, 5                  ; c2 should be 5;       r16 should be 5
+00001050  0000004176  2c400005                la r17, 5                  ; c2 should be 5;       r17 should be 5
+00001054  0000004180  0ca0201b                ld r18, 8219(r16)          ; c2 should be 0x201b;  r18 should be 5
+00001058  0000004184  0cc02020                ld r19, 8224               ; c2 should be 0x2020;  r19 should be 5
+0000105c  0000004188  2d000006                la r20, 6                  ; c2 should be 6;       r20 should be 6
+00001060  0000004192  1d008028                st r20, 32808              ; c1 should be 0x8028;  loc 0x2028 should be 6 
+00001064  0000004196  0d428027                ld r21, 32807(r1)          ; c2 should be 0x8027;  r21 should be 6
+00001068  0000004200  0d808028                ld r22, 32808              ; c2 should be 0x8028;  r22 should be 6
+0000106c  0000004204  2dc00006                la r23, 6                  ; c2 should be 6;       r23 should be 6
+00001070  0000004208  2e000007                la r24, 7                  ; c2 should be 7;       r24 should be 7
+00001074  0000004212  26006fbc                str r24, SevenR            ; c1 should be 0x0fbc;  loc 0x8034 should be 7 
+00001078  0000004216  0e408034                ld r25, SevenR             ; c2 should be 0x8034;  r25 should be 7
+0000107c  0000004220  0eac802e                ld r26, 32814(r22)         ; c2 should be 0x802e;  r26 should be 7
+00001080  0000004224  16c06fb0                ldr r27, SevenR            ; c1 should be 0x0fb0;  r27 should be 7
+00001084  0000004228  2f000008                la r28, 8                  ; c2 should be 8;       r28 should be 8
+00001088  0000004232  1f00803c                st r28, EightR             ; c1 should be 0x803c;  loc 0x803c should be 8 
+0000108c  0000004236  17406fac                ldr r29, EightR            ; c1 should be 0x0fac;  r29 should be 8
+00001090  0000004240  0f80803c                ld r30, EightR             ; c2 should be 0x803c;  r30 should be 8
+00001094  0000004244  0ffc8034                ld r31, 32820(r30)         ; c2 should be 0x8034;  r31 should be 8
+00001098  0000004248  f8000000                stop                       
+                                                                         
+                                ORG_test1:    .org 8192                  ; relocate to 0x2000
+00002000  0000008192            One:          .dw 1                      ; reserve one word at 0x2000, uninitialized
+00002004  0000008196            DW_test1:     .dw 1                      ; skip 1 word at 0x2004
+00002008  0000008200            Two:          .dw 1                      ; reserve one word at 0x2008, uninitialized
+0000200c  0000008204            DW_test2:     .dw 2                      ; skip 2 words at 0x200c
+00002014  0000008212            Three:        .dw 1                      ; reserve one word at 0x2014, uninitialized
+00002018  0000008216            Unused3:      .dw 1                      ; skip 1 word 0x2018
+0000201c  0000008220  00000004  Four:         .dc 4                      ; reserve one word at 0x201c, initialized to 4
+00002020  0000008224  00000005  Five:         .dc 5, 0, 0                ; reserve three words starting at 0x2020, initialized
+00002024  0000008228  00000000
+00002028  0000008232  00000000
+0000202c  0000008236            DH_test1:     .dh 4                      ; skip 2 words as 4 halfwords at 0x202c
+00002034  0000008244            Seven:        .dw 1                      ; reserve one word at 0x2034, uninitialized
+00002038  0000008248            DB_test1:     .db 4                      ; skip 1 word as 4 bytes at 0x2038
+0000203c  0000008252            Eight:        .dw 1                      ; reserve one word at 0x203c, uninitialized
+                                                                         
+                                ORG_test2:    .org 8272                  ; relocate to 0x2050 (instr at 0x2040)
+00002050  0000008272        01  DCB_test1:    .dcb 1                     ; reserve one byte at 0x2050, initialized
+00002051  0000008273      0203  DCB_test2:    .dcb 2, 3                  ; reserve two bytes at 0x2051, initialized
+00002053  0000008275    040506  DCB_test3:    .dcb 4, 5, 6               ; reserve three bytes at 0x2053, initialized
+00002056  0000008278  0708090a  DCB_test4:    .dcb 7, 8, 9, 10           ; reserve four bytes at 0x2056, initialized
+0000205a  0000008282  0b0c0d0e  DCB_test5:    .dcb 11, 12, 13, 14, 15    ; reserve five bytes at 0x205a, initialized
+0000205e  0000008286        0f
+0000205f  0000008287  10111213  DCB_test6:    .dcb 16, 17, 18, 19, 20, 21  ; reserve six bytes at 0x205f, initialized
+00002063  0000008291      1415
+00002065  0000008293        ff  DCB_test7:    .dcb -1                    ; reserve 1 byte at 2065, initialized
+00002066  0000008294      7fff  DCB_test8:    .dcb 127, -1               ; reserve 2 bytes at 2066, initialized 
+                                                                         
+                                ORG_test3:    .org 8320                  ; relocate to 0x2080
+00002080  0000008320      0001  DCH_test1:    .dch 1                     ; reserve one halfword at 0x2080, initialized
+00002082  0000008322  00020003  DCH_test2:    .dch 2, 3                  ; reserve two halfwords at 0x2082, initialized
+00002086  0000008326  00040005  DCH_test3:    .dch 4, 5, 6               ; reserve three halfwords at 0x2086, initialized
+0000208a  0000008330      0006
+0000208c  0000008332  00070008  DCH_test4:    .dch 7, 8, 9, 10           ; reserve four halfwords at 0x208c, initialized
+00002090  0000008336  0009000a
+00002094  0000008340            Skip1:        .dw 2                      ; skip 2 words at 0x2094
+                                                                         ;
+                                                                         ; repeat initializing halfwords at off-word boundaries
+                                                                         ;
+0000209c  0000008348            Skip2:        .db 3                      ; skip 3 bytes at 0x209c
+0000209f  0000008351      0001  DCH_test5:    .dch 1                     ; reserve one halfword at 0x209f, initialized
+000020a1  0000008353  00020003  DCH_test6:    .dch 2, 3                  ; reserve two halfwords at 0x20a1, initialized
+000020a5  0000008357  00040005  DCH_test7:    .dch 4, 5, 6               ; reserve three halfwords at 0x20a5, initialized
+000020a9  0000008361      0006
+000020ab  0000008363  00070008  DCH_test8:    .dch 7, 8, 9, 10           ; reserve four halfwords at 0x20ab, initialized
+000020af  0000008367  0009000a
+                                                                         ;
+                                                                         ; test string literal storage
+                                                                         ;
+                                ORG_test4:    .org 0x20c0                ; relocate to 0x20c0 (0x hex format)
+000020c0  0000008384  61626364  DCB_test9:    .dcb "abcdefghijklmnopqrstuvwxyz0123456789"  ; reserve a long string (byte-wise) at 0x20c0
+000020c4  0000008388  65666768
+000020c8  0000008392  696a6b6c
+000020cc  0000008396  6d6e6f70
+000020d0  0000008400  71727374
+000020d4  0000008404  75767778
+000020d8  0000008408  797a3031
+000020dc  0000008412  32333435
+000020e0  0000008416  36373839
+                                ORG_test5:    .org 2100H                 ; relocate to 2100H (alternative hex format)
+00002100  0000008448  00610062  DCB_test10:   .dch "abcdefghijklmnopqrstuvwxyz0123456789"  ; reserve a long string (halfword-wise) at 0x2100
+00002104  0000008452  00630064
+00002108  0000008456  00650066
+0000210c  0000008460  00670068
+00002110  0000008464  0069006a
+00002114  0000008468  006b006c
+00002118  0000008472  006d006e
+0000211c  0000008476  006f0070
+00002120  0000008480  00710072
+00002124  0000008484  00730074
+00002128  0000008488  00750076
+0000212c  0000008492  00770078
+00002130  0000008496  0079007a
+00002134  0000008500  00300031
+00002138  0000008504  00320033
+0000213c  0000008508  00340035
+00002140  0000008512  00360037
+00002144  0000008516  00380039
+                                orgconst:     .equ 0x2160                ; set const using hex value
+                                ORG_test6:    .org orgconst              ; relocate to 0x2160 using label
+00002160  0000008544  00000061  DCB_test11:   .dc "abcdefghijklmnopqrstuvwxyz0123456789"  ; reserve a long string (word-wise) at 0x2160
+00002164  0000008548  00000062
+00002168  0000008552  00000063
+0000216c  0000008556  00000064
+00002170  0000008560  00000065
+00002174  0000008564  00000066
+00002178  0000008568  00000067
+0000217c  0000008572  00000068
+00002180  0000008576  00000069
+00002184  0000008580  0000006a
+00002188  0000008584  0000006b
+0000218c  0000008588  0000006c
+00002190  0000008592  0000006d
+00002194  0000008596  0000006e
+00002198  0000008600  0000006f
+0000219c  0000008604  00000070
+000021a0  0000008608  00000071
+000021a4  0000008612  00000072
+000021a8  0000008616  00000073
+000021ac  0000008620  00000074
+000021b0  0000008624  00000075
+000021b4  0000008628  00000076
+000021b8  0000008632  00000077
+000021bc  0000008636  00000078
+000021c0  0000008640  00000079
+000021c4  0000008644  0000007a
+000021c8  0000008648  00000030
+000021cc  0000008652  00000031
+000021d0  0000008656  00000032
+000021d4  0000008660  00000033
+000021d8  0000008664  00000034
+000021dc  0000008668  00000035
+000021e0  0000008672  00000036
+000021e4  0000008676  00000037
+000021e8  0000008680  00000038
+000021ec  0000008684  00000039
+                                                                         
+                                ORG_testR:    .org 32768                 ; relocate to 0x8000
+00008000  0000032768            OneR:         .dw 1                      ; reserve one word at 0x8000, uninitialized
+00008004  0000032772            DW_test1R:    .dw 1                      ; skip 1 word at 0x8004
+00008008  0000032776            TwoR:         .dw 1                      ; reserve one word at 0x8008, uninitialized
+0000800c  0000032780            DW_test2R:    .dw 2                      ; skip 2 words at 0x800c
+00008014  0000032788            ThreeR:       .dw 1                      ; reserve one word at 0x8014, uninitialized
+00008018  0000032792            Unused3R:     .dw 1                      ; skip 1 word 0x8018
+0000801c  0000032796  00000004  FourR:        .dc 4                      ; reserve one word at 0x801c, initialized to 4
+00008020  0000032800  00000005  FiveR:        .dc 5, 0, 0                ; reserve three words starting at 0x8020, initialized
+00008024  0000032804  00000000
+00008028  0000032808  00000000
+0000802c  0000032812            DH_test1R:    .dh 4                      ; skip 2 words as 4 halfwords at 0x802c
+00008034  0000032820            SevenR:       .dw 1                      ; reserve one word at 0x8034, uninitialized
+00008038  0000032824            DB_test1R:    .db 4                      ; skip 1 word as 4 bytes at 0x8038
+0000803c  0000032828            EightR:       .dw 1                      ; reserve one word at 0x803c, uninitialized
+                                                                         ; end of file comment
+
+--- Symbol Table ---
+DH_test1R: 32812
+Five: 8224
+orgconst: 8544
+Eight: 8252
+ThreeR: 32788
+DW_test1R: 32772
+SevenR: 32820
+Unused3R: 32792
+ORG_test6: 8544
+ORG_test5: 8448
+ORG_test4: 8384
+Two: 8200
+ORG_test3: 8320
+ORG_test2: 8272
+Unused3: 8216
+ORG_test1: 8192
+DCB_test9: 8384
+DCB_test8: 8294
+DCB_test7: 8293
+EightR: 32828
+DCB_test6: 8287
+DCH_test8: 8363
+DCB_test5: 8282
+DCH_test7: 8357
+DCB_test4: 8278
+DCH_test6: 8353
+DCB_test3: 8275
+DCH_test5: 8351
+DCB_test2: 8273
+DCH_test4: 8332
+DCB_test1: 8272
+DCH_test3: 8326
+DCH_test2: 8322
+FiveR: 32800
+DCH_test1: 8320
+Three: 8212
+Four: 8220
+DB_test1R: 32824
+DB_test1: 8248
+DCB_test11: 8544
+DCB_test10: 8448
+DH_test1: 8236
+DW_test2: 8204
+DW_test1: 8196
+TwoR: 32776
+FourR: 32796
+DW_test2R: 32780
+OneR: 32768
+One: 8192
+ORG_testR: 32768
+Main: 4096
+Seven: 8244
+Addr1: 32785
+Skip2: 8348
+Skip1: 8340

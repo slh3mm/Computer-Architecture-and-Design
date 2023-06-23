@@ -1,0 +1,62 @@
+# Reading pref.tcl
+# do control_signals_logic_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/opcode_decoder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:29:12 on Mar 03,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/opcode_decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity opcode_decoder
+# -- Compiling architecture rtl of opcode_decoder
+# End time: 11:29:12 on Mar 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/control_signals_logic.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:29:12 on Mar 03,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/control_signals_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity control_signals_logic
+# -- Compiling architecture rtl of control_signals_logic
+# -- Loading entity opcode_decoder
+# End time: 11:29:13 on Mar 03,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+do testbench.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:29:16 on Mar 03,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 4/TB/testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench
+# -- Compiling architecture behavioral of testbench
+# End time: 11:29:16 on Mar 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.testbench 
+# Start time: 11:29:16 on Mar 03,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading work.control_signals_logic(rtl)
+# Loading work.opcode_decoder(rtl)
+run 12000 ns
+# ** Note: Number of errors = 0
+#    Time: 11600 ns  Iteration: 0  Instance: /testbench
+# End time: 12:31:10 on Mar 03,2023, Elapsed time: 1:01:54
+# Errors: 0, Warnings: 0

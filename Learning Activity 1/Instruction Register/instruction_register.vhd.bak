@@ -1,0 +1,25 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity instruction_register is
+  port (
+    Reset    : in std_logic;
+    Clock     : in std_logic;
+    IRin     : in std_logic;
+    c1out    : in std_logic;
+    c2out    : in std_logic;
+    Gra      : in std_logic;
+    Grb      : in std_logic;
+    Grc      : in std_logic;
+    opcode : out std_logic_vector(4 downto 0);
+    register_select : out std_logic_vector(4 downto 0);
+    c3_2_downto_0 : out std_logic_vector(2 downto 0);
+    cpu_bus  : inout std_logic_vector(31 downto 0) := (others => 'Z')
+    );
+end instruction_register;
+
+architecture rtl of instruction_register is
+
+begin
+
+end rtl;

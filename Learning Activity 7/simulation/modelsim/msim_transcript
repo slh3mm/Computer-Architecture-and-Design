@@ -1,0 +1,450 @@
+# Reading pref.tcl
+# do CPU_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/PC/program_counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:44:28 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/PC/program_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity program_counter
+# -- Compiling architecture rtl of program_counter
+# End time: 10:44:29 on Apr 28,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/IR/instruction_register.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:44:29 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/IR/instruction_register.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity instruction_register
+# -- Compiling architecture rtl of instruction_register
+# End time: 10:44:29 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Source/register_file.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:44:30 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 2/RF/Source/register_file.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity register_file
+# -- Compiling architecture rtl of register_file
+# End time: 10:44:30 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:44:30 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu
+# -- Compiling architecture rtl of alu
+# End time: 10:44:30 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/Datapath.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:44:30 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/Datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Datapath
+# -- Compiling architecture bdf_type of Datapath
+# End time: 10:44:31 on Apr 28,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/opcode_decoder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:44:31 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/opcode_decoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity opcode_decoder
+# -- Compiling architecture rtl of opcode_decoder
+# End time: 10:44:31 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/control_signals_logic.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:44:31 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/control_signals_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity control_signals_logic
+# -- Compiling architecture rtl of control_signals_logic
+# -- Loading entity opcode_decoder
+# End time: 10:44:32 on Apr 28,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 5/Shift Control/shift_control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:44:32 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 5/Shift Control/shift_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shift_control
+# -- Compiling architecture rtl of shift_control
+# End time: 10:44:32 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 5/Sequencer/sequencer.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:44:32 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 5/Sequencer/sequencer.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity sequencer
+# -- Compiling architecture rtl of sequencer
+# End time: 10:44:33 on Apr 28,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 5/Con Logic/con_logic.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:44:33 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 5/Con Logic/con_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity con_logic
+# -- Compiling architecture rtl of con_logic
+# End time: 10:44:33 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/ControlUnit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:44:33 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/ControlUnit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ControlUnit
+# -- Compiling architecture bdf_type of ControlUnit
+# End time: 10:44:33 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/memory_interface.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:44:33 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/memory_interface.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity memory_interface
+# -- Compiling architecture Rtl of memory_interface
+# End time: 10:44:34 on Apr 28,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/CPU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:44:34 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/CPU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CPU
+# -- Compiling architecture bdf_type of CPU
+# End time: 10:44:34 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do alu_do.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:44:49 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/ALU TB/testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench
+# -- Compiling architecture behavioral of testbench
+# End time: 10:44:49 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.testbench 
+# Start time: 10:44:49 on Apr 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading work.alu(rtl)
+do Testbench.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:45:00 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/clock_reset_start.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_reset_start
+# -- Compiling architecture rtl of clock_reset_start
+# End time: 10:45:00 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:45:00 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/memory_bus_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memory_bus_controller
+# -- Compiling architecture RTL of memory_bus_controller
+# End time: 10:45:00 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:45:00 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/ram_6116.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ram_6116
+# -- Compiling architecture rtl of ram_6116
+# End time: 10:45:01 on Apr 28,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:45:01 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/rom_27c64.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rom_27C64
+# -- Compiling architecture rtl of rom_27C64
+# End time: 10:45:01 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:45:01 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/CPU TB/BasicRISCCPUTestbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity BasicRISCCPUTestbench
+# -- Compiling architecture bdf_type of BasicRISCCPUTestbench
+# End time: 10:45:02 on Apr 28,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+do alu_do.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:45:06 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/ALU TB/testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench
+# -- Compiling architecture behavioral of testbench
+# End time: 10:45:07 on Apr 28,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 10:45:09 on Apr 28,2023, Elapsed time: 0:00:20
+# Errors: 0, Warnings: 0
+# vsim work.testbench 
+# Start time: 10:45:09 on Apr 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading work.alu(rtl)
+run 4000 ns
+rester -f
+# invalid command name "rester"
+restart 0f
+restart -f
+run 15000 ns
+do csl_do.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:54:36 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/CSL TB/testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench
+# -- Compiling architecture behavioral of testbench
+# End time: 10:54:36 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:54:38 on Apr 28,2023, Elapsed time: 0:09:29
+# Errors: 0, Warnings: 0
+# vsim work.testbench 
+# Start time: 10:54:38 on Apr 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading work.control_signals_logic(rtl)
+# Loading work.opcode_decoder(rtl)
+run 4000 ns
+do Testbench.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:11 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/clock_reset_start.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_reset_start
+# -- Compiling architecture rtl of clock_reset_start
+# End time: 10:55:11 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:11 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/memory_bus_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memory_bus_controller
+# -- Compiling architecture RTL of memory_bus_controller
+# End time: 10:55:11 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:11 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/ram_6116.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ram_6116
+# -- Compiling architecture rtl of ram_6116
+# End time: 10:55:11 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:12 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/rom_27c64.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rom_27C64
+# -- Compiling architecture rtl of rom_27C64
+# End time: 10:55:12 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:12 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/CPU TB/BasicRISCCPUTestbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity BasicRISCCPUTestbench
+# -- Compiling architecture bdf_type of BasicRISCCPUTestbench
+# End time: 10:55:12 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run 4000 ns
+restart -f
+do csl_do.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:56:08 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/CSL TB/testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench
+# -- Compiling architecture behavioral of testbench
+# End time: 10:56:08 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:56:10 on Apr 28,2023, Elapsed time: 0:01:32
+# Errors: 0, Warnings: 0
+# vsim work.testbench 
+# Start time: 10:56:10 on Apr 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading work.control_signals_logic(rtl)
+# Loading work.opcode_decoder(rtl)
+do testbench.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:56:25 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/clock_reset_start.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_reset_start
+# -- Compiling architecture rtl of clock_reset_start
+# End time: 10:56:25 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:56:25 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/memory_bus_controller.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memory_bus_controller
+# -- Compiling architecture RTL of memory_bus_controller
+# End time: 10:56:25 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:56:25 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/ram_6116.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ram_6116
+# -- Compiling architecture rtl of ram_6116
+# End time: 10:56:26 on Apr 28,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:56:26 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 6/rom_27c64.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rom_27C64
+# -- Compiling architecture rtl of rom_27C64
+# End time: 10:56:26 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:56:26 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/CPU TB/BasicRISCCPUTestbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity BasicRISCCPUTestbench
+# -- Compiling architecture bdf_type of BasicRISCCPUTestbench
+# End time: 10:56:26 on Apr 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run 4000 ns
+do csl_do.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:58:48 on Apr 28,2023
+# vcom -reportprogress 300 -2008 -work work C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 7/CSL TB/testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench
+# -- Compiling architecture behavioral of testbench
+# End time: 10:58:49 on Apr 28,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 10:58:50 on Apr 28,2023, Elapsed time: 0:02:40
+# Errors: 0, Warnings: 0
+# vsim work.testbench 
+# Start time: 10:58:50 on Apr 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading work.control_signals_logic(rtl)
+# Loading work.opcode_decoder(rtl)
+run 4000 ns
+run 10000 ns
+# ** Note: Number of errors = 0
+#    Time: 12 us  Iteration: 0  Instance: /testbench
+run 15000 ns
+restart -f
+run 15000 ns
+# ** Note: Number of errors = 0
+#    Time: 12 us  Iteration: 0  Instance: /testbench
+# End time: 11:14:27 on Apr 28,2023, Elapsed time: 0:15:37
+# Errors: 0, Warnings: 0

@@ -1,0 +1,93 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/IR/simulation/modelsim
+Einstruction_register
+Z1 w1675267809
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/IR/instruction_register.vhd
+Z5 FC:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/IR/instruction_register.vhd
+l0
+L4 1
+V[[9WKehDZSb<ClIgjM?>n3
+!s100 R9Oe<bkiKCAbWzJ8i4e]L2
+Z6 OV;C;2020.1;71
+33
+Z7 !s110 1675712767
+!i10b 1
+Z8 !s108 1675712767.000000
+Z9 !s90 -reportprogress|300|-2008|-work|work|C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/IR/instruction_register.vhd|
+Z10 !s107 C:/Users/spenc/OneDrive/Documents/School/ECE 4435/Learning Activity 1/IR/instruction_register.vhd|
+!i113 1
+Z11 o-2008 -work work
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+DEx4 work 20 instruction_register 0 22 [[9WKehDZSb<ClIgjM?>n3
+!i122 0
+l25
+L21 55
+VUETYGLQk:c@jcXlhTjJP72
+!s100 D=db3Kh0F[BJNgCnaU;GI0
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etestbench
+Z13 w1675442639
+R2
+R3
+!i122 1
+R0
+Z14 8C:\Users\spenc\OneDrive\Documents\School\ECE 4435\Learning Activity 1 IR TB\testbench.vhd
+Z15 FC:\Users\spenc\OneDrive\Documents\School\ECE 4435\Learning Activity 1 IR TB\testbench.vhd
+l0
+L4 1
+VnI^L@@9hXRZ;zSllZLOP73
+!s100 ?;Fi2HEi<1II4RT3IjQ^^2
+R6
+33
+Z16 !s110 1675712778
+!i10b 1
+Z17 !s108 1675712778.000000
+Z18 !s90 -reportprogress|300|-2008|-work|work|C:\Users\spenc\OneDrive\Documents\School\ECE 4435\Learning Activity 1 IR TB\testbench.vhd|
+!s107 C:\Users\spenc\OneDrive\Documents\School\ECE 4435\Learning Activity 1 IR TB\testbench.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 9 testbench 0 22 nI^L@@9hXRZ;zSllZLOP73
+!i122 1
+l39
+L7 110
+VeE]3HJ7b1<J0V_jooHnH?0
+!s100 zbJf7m4PYGb;82=DI<UBi2
+R6
+33
+R16
+!i10b 1
+R17
+R18
+Z19 !s107 C:\Users\spenc\OneDrive\Documents\School\ECE 4435\Learning Activity 1 IR TB\testbench.vhd|
+!i113 1
+R11
+R12

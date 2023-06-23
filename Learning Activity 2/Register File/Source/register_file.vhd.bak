@@ -1,0 +1,21 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity register_file is
+  port (
+    Reset    : in std_logic;
+    Clock     : in std_logic;
+    register_select    : in std_logic_vector(4 downto 0);
+    Rin      : in std_logic;
+    Rout     : in std_logic;
+    BAout    : in std_logic;
+    cpu_bus  : inout std_logic_vector(31 downto 0) := (others => 'Z')
+    );
+end register_file;
+
+architecture rtl of register_file is
+
+begin
+
+end rtl;

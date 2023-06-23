@@ -1,0 +1,63 @@
+LIBRARY IEEE ;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+entity control_signals_logic is
+  port(
+    opcode : in std_logic_vector(4 downto 0);
+    t0 : in std_logic;
+    t1 : in std_logic;
+    t2 : in std_logic;
+    t3 : in std_logic;
+    t4 : in std_logic;
+    t5 : in std_logic;
+    t6 : in std_logic;
+    t7 : in std_logic;
+    neq0      : in   std_logic;
+    con       : in   std_logic;
+    irin      : out std_logic;
+    c1out     : out std_logic;
+    c2out     : out std_logic;
+    gra       : out std_logic;
+    grb       : out std_logic;
+    grc       : out std_logic;
+    main      : out std_logic;
+    mdbus     : out std_logic;
+    mdrd      : out std_logic;
+    mdout     : out std_logic;
+    pcin      : out std_logic;
+    pcout     : out std_logic;
+    ain       : out std_logic;
+    cin       : out std_logic;
+    cout      : out std_logic;
+    add_op    : out std_logic;
+    sub_op    : out std_logic;
+    neg_op    : out std_logic;
+    and_op    : out std_logic;
+    or_op     : out std_logic;
+    not_op    : out std_logic;
+    shr_op    : out std_logic;
+    shra_op   : out std_logic;
+    shl_op    : out std_logic;
+    shc_op    : out std_logic;
+    ceqb_op   : out std_logic;
+    incr4_op  : out std_logic;
+    baout     : out std_logic;
+    rin       : out std_logic;
+    rout      : out std_logic;
+    end_sig : out std_logic;
+    stop_sig : out std_logic;
+    read_control : out std_logic; -- to sequencer
+    write_control : out std_logic; -- to sequencer
+    wait_sig : out std_logic;
+    goto6 : out std_logic;
+    conin     : out std_logic;
+    ld_shift      : out std_logic;
+    decr      : out std_logic
+    );
+end control_signals_logic;
+
+architecture rtl of control_signals_logic is
+  
+begin
+
+end rtl;

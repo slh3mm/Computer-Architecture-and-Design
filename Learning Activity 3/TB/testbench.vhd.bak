@@ -1,0 +1,29 @@
+LIBRARY ieee;
+use ieee.std_logic_1164.all
+
+ENTITY testbench IS
+end testbench;
+
+ARCHITECTURE behavioral OF testbench IS
+
+	COMPONENT alu
+	PORT(
+		Reset    : in std_logic;
+		Clock    : in std_logic;
+		Ain      : in std_logic;
+		Cin      : in std_logic;
+		Cout     : in std_logic;
+		ADD_op   : in std_logic;
+		SUB_op   : in std_logic;
+		Neg_op   : in std_logic;
+		AND_op   : in std_logic;
+		OR_op    : in std_logic;
+		NOT_op   : in std_logic;
+		SHR_op   : in std_logic;
+		SHRA_op  : in std_logic;
+		SHL_op   : in std_logic;
+		SHC_op   : in std_logic;
+		CeqB_op  : in std_logic;
+		INCR4_op : in std_logic;
+		cpu_bus  : inout std_logic_vector(31 downto 0):= (others => 'Z'));
+	)

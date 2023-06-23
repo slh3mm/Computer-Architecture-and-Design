@@ -1,0 +1,11 @@
+#Byte 0 ROM file. Automatically generated on 13:29:55 20 Apr, 2023
+#Input file: and.txt
+
+#address / data ;
+#----------------
+0/ff;
+1/20;
+2/00;
+3/04;
+4/04;
+5/00;
