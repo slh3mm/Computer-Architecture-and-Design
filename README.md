@@ -5,4 +5,4 @@ ECE4435&nbsp;(Computer Architecture and Design) Introduces computer architecture
 * Techniques for managing complexity at the register transfer level
 * Tools for digital hardware description, simulation, and synthesis.
 
-Includes laboratory exercises and significant design activities using a hardware description language and simulation.
+This repository includes the contents of a semester-long project that revolved around building a Basic RISC CPU in VHDL using Intel Quartus.
